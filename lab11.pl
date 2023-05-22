@@ -94,7 +94,7 @@ outDegree([e(H1, H2) | T], H3, N) :- outDegree(T, H3, N).
 % drop all edges starting and leaving from a Node
 % use dropAll defined in 1.1??
 % dropNode([e(1,2),e(1,3),e(2,3)],1,[e(2,3)]).
-dropNode(G, N, OG) :- dropAll(e(N, _), G, G2), dropAll(e(_, N), G3, OG).
+dropNode(G, N, OG) :- dropAll(e(N, _), G, G2), dropAll(e(_, N), G2, OG).
 
 
 
